@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HeyWeather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="top-cities.css">
+    <script defer src="index.js"></script>
+    <script defer src="carousel.js"></script>
+    <script defer src="top-cities.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
+  </head>
+  <body>
+
+    <!-- header with logo and navigation -->
+    <section class="header">
+      <div class="logo">
+        <p>heyWeather</p>
+      </div>
+      <div class="nav">
+        <nav>
+          <ul>
+            <!-- <li><a href="#footer">Contact</a></li>
+            <li><a href="#">Lifestyle</a></li> -->
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- top section with cities displayed  -->
+    <section class="top-container">
+      <div class="top-container-inner">
+
+      <div class="cities">
+        <!-- first city -->
+        <!-- <template> -->
+        <div class="city-1">
+              <div class="pic">
+                  <img src="/assets/london (1).jpg" alt="london" class="london">
+              </div>
+              <div class="city-text">
+                  <h3>London</h3>
+                  <h4 class="london-weather">Rainy</h4>
+                  <p class="london-temp">26 <span>&#8451;</span></p>
+              </div>
+        </div>
+      <!-- </template> -->
+
+        <!-- second-city -->
+        <div class="city-2">
+            <div class="pic">
+                <img src="/assets/lagos (1).jpg" alt="lagos" class="lagos">
+            </div>
+            <div class="city-text">
+                <h3>Lagos</h3>
+                <h4 class="lagos-weather">Sunny</h4>
+                <p class="lagos-temp">32 <span>&#8451;</span></p>
+            </div>
+        </div>
+
+        <!-- third-city -->
+        <div class="city-3">
+            <div class="pic">
+                <img src="/assets/paris (1).jpg" alt="paris" class="paris">
+            </div>
+            <div class="city-text">
+                <h3>Paris</h3>
+                <h4 class="paris-weather">Cloudy</h4>
+                <p class="paris-temp">28 <span>&#8451;</span></p>
+            </div>
+        </div>
+
+        <!-- fourth-city -->
+        <div class="city-4">
+            <div class="pic">
+                <img src="/assets/riyadh (1).jpg" alt="riyadh" class="riyadh">
+            </div>
+            <div class="city-text">
+                <h3>Riyadh</h3>
+                <h4 class="riyadh-weather">Sunny</h4>
+                <p class="riyadh-temp">32 <span>&#8451;</span></p>
+            </div>
+        </div>
+
+        <!-- fifth-city -->
+          <div class="city-5">
+              <div class="pic">
+                  <img src="/assets/seoul (1).jpg" alt="seoul" class="Seoul">
+              </div>
+              <div class="city-text">
+                  <h3>Seoul</h3>
+                  <h4 class="seoul-weather">Sunny</h4>
+                  <p class="seoul-temp">32 <span>&#8451;</span></p>
+              </div>
+          </div>
+      </div>
+      <!-- end of top cities -->
+
+        <!-- the carousel navigation -->
+        <div class="nav">
+          <button class="prev">
+              <i class="fas fa-angle-left"></i>
+          </button>
+          <button class="next">
+            <i class="fas fa-angle-right"></i>
+          </button>
+      </div>
+      <!-- end of carousel navigation -->
+
+      </div>
+      <!-- top container inner end-->
+
+      <!-- introductory-text -->
+      <div class="intro-text">
+          <h1>Weather And Time For Any City You Want </h1>
+      </div>
+      <!-- end of introductory text -->
+
+      <!-- city search button -->
+      <div class="search">
+          <input type="search" name="search" id="search-btn" placeholder="Search city...">
+      </div>
+
+      <!-- pin city button -->
+      <!-- <div id="pin-city">
+       <button class="pin-city">
+          pin city
+       </button>
+      </div> -->
+      <!-- end of pin city button -->
+      </section>
+
+      <!-- bottom section with weather details -->
+      <section class="bottom-container" id="bottom-container">
+
+        <!-- div showing the current city -->
+      <div class="current-city">
+          <h2 class="current-city-name">Abuja</h2>
+          <p class="time">09:30 am</p>
+          <p class="date">30 August</p>
+          <p class="days">Tuesday</p>
+          <div class="weather-icon">
+            <i class="fas fa-sun sun" id="sun"></i>
+          </div>
+          <p class="description">Sunny</p>
+          <p class="degree">31&#8451;</p>
+          <p class="feels-like"></p>
+
+          <!-- weather for the next four days -->
+          <div class="days-wrapper">
+          <div class="four-days">
+          <p class="days">In 1 day.<span class=" day1">32</span><i class="fas fa-sun " id="day1-icon"></i></p>
+          <p class="days">In 2 days<span class=" day2">32</span><i class="fas fa-sun " id="day2-icon"></i></p>
+          <p class="days">In 3 days<span class=" day3">32</span><i class="fas fa-sun " id="day3-icon"></i></p>
+          <p class="days">In 4 days<span class=" day4">32</span><i class="fas fa-sun " id="day4-icon"></i> </p>
+          </div>
+          </div>
+      </div>
+      <!-- breakdown of hourly weather -->
+      <div class="current-day-details">
+
+          <!-- heading for current day detail -->
+          <div class="today-heading">
+              <h2>Today </h2>
+              <div class="high-low">
+                  <span class="high">H 34</span>
+                  <span class="low">L 24</span>
+              </div>
+          </div>
+
+          <!-- a graphical breakdown -->
+          <div class="hour-breakdown">
+              <!-- hour one -->
+              <div class="hour-1 hour-div">
+                  <p class="time1">+1hr</p>
+                  <div class="weather-icon">
+                    <i class="fas fa-sun" id="hour1-icon"></i>
+                  </div>
+                  <p class="hour-breakdown-temp hour1">30 <span>&#8451;</span></p>
+            </div>
+
+              <!-- hour two -->
+              <div class="hour-2 hour-div">
+                <p class="time2">+2hrs</p>
+                <div class="weather-icon">
+                    <i class="fas fa-sun" id="hour2-icon"></i>
+                  </div>
+                <p class="hour-breakdown-temp hour2">32 <span>&#8451;</span></p>
+            </div>
+
+            <!-- hour three -->
+            <div class="hour-3 hour-div">
+                <p class="time3">+3hrs</p>
+                <div class="weather-icon">
+                    <i class="fas fa-sun" id="hour3-icon"></i>
+                  </div>
+                <p class="hour-breakdown-temp hour3">29 <span>&#8451;</span></p>
+            </div>
+
+            <!-- hour four -->
+            <div class="hour-4 hour-div">
+                <p class="time4">+4hrs</p>
+                <div class="weather-icon">
+                    <i class="fas fa-sun" id="hour4-icon"></i>
+                  </div>
+                <p class="hour-breakdown-temp hour4">30 <span>&#8451;</span></p>
+            </div>
+
+            <!-- hour five -->
+            <div class="hour-5 hour-div">
+                <p class="time5">+5hrs</p>
+                <div class="weather-icon">
+                    <i class="fas fa-sun" id="hour5-icon"></i>
+                  </div>
+                <p class="hour-breakdown-temp hour5">32 <span>&#8451;</span></p>
+            </div>
+
+            <!-- hour six -->
+            <div class="hour-6 hour-div">
+                <p class="time6">+6hrs</p>
+                <div class="weather-icon">
+                    <i class="fas fa-sun" id="hour6-icon"></i>
+                  </div>
+                <p class="hour-breakdown-temp hour6">28 <span>&#8451;</span></p>
+            </div>
+
+            <!-- hour seven -->
+            <div class="hour-7 hour-div">
+                <p class="time7">+7hrs</p>
+                <div class="weather-icon">
+                    <i class="fas fa-sun" id="hour7-icon"></i>
+                  </div>
+                <p class="hour-breakdown-temp hour7">29 <span>&#8451;</span></p>
+            </div>
+          </div>
+          <!-- end of graphical breakdown -->
+
+          <!-- more weather info -->
+          <div class="more-weather-info">
+              <!-- first part -->
+              <div class="info1">
+                <h3>Additional Info</h3>
+                <ul>
+                  <li class="pressure">Pressure: 1023</li>
+                  <li class="humidity">Humidity: 100 %</li>
+                  <li class="wind-speed">Wind speed: 1.5</li>
+                  <li class="wind-deg">Wind degree: 350</li>
+                </ul>
+              </div>
+
+              <!-- second part -->
+              <div class="info2">
+                <h3>Tips and Bits</h3>
+                <p class="tips">
+                  Seems like a good day to go shopping or visit friends? Go for it!😎
+                </p>
+              </div>
+          </div>
+          <p class="info-arrow">
+              More Info <br> <i class="fas fa-long-arrow-alt-right arrow"></i>
+          </p>
+          <!-- end of more weather info -->
+      </div>
+    </section>
+    <!-- end of bottom section with weather details -->
+
+    <!-- footer section -->
+    <section class="footer" id="footer">
+        <footer>
+            <!-- logo -->
+            <div class="logo">
+                <p>heyWeather</p>
+              </div>
+
+              <!-- copyright -->
+              <div class="copyright">
+                <p>&copy; 2020. Made by Hafsah. <a href="https://github.com/Iamhafsah" target="blank"> <br><strong>heyWeather.inc</strong></a></p>
+            </div>
+
+            <!-- social media links -->
+              <div class="social-links">
+                <a href="https://twitter.com/hafsyforever" target="blank"><i class="fab fa-twitter social"></i></a>
+                <a href="https://instagram.com/hafsyforever" target="blank"><i class="fab fa-instagram social"></i></a>
+                <a href="https://facebook.com" target="blank"><i class="fab fa-facebook-f social"></i></a>
+                <a href="https://medium.com/@emekomahafsah" target="blank"><i class="fab fa-medium-m social"></i></a>
+                <a href="https://linkedin.com" target="blank"><i class="fab fa-linkedin-in social"></i></a>
+            </div>
+            </div>
+        </footer>
+    </section>
+  </body>
+</html>
