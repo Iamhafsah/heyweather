@@ -105,7 +105,7 @@ const getWeather = async () => {
         
         getTime = async() =>{
             const newTime = await fetch(
-                `http://worldtimeapi.org/api/timezone/${detail.timezone}`
+                `https://worldtimeapi.org/api/timezone/${detail.timezone}`
             );
             const timeIn = await newTime.json();
         
