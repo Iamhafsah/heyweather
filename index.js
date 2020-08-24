@@ -91,12 +91,13 @@ const getWeather = async () => {
                 `https://api.openweathermap.org/data/2.5/weather?q=${searchBtn.value}&units=metric&appid=${api.key}`
             );
             const myJson = await response.json();
+            console.log(myJson);
             if(myJson.cod == 404){
                 alert('I cant find the name of your city. Please check your spelling and try again.')
-            }if(myJson.cod != 404){
+            }if(myJson.cod == 200){
             element.scrollIntoView({behaviour:'smooth'});
             };
-        
+            
         latitude = async() =>{
             const respo = await fetch(
              `https://api.openweathermap.org/data/2.5/onecall?lat=${myJson.coord.lat}&lon=${myJson.coord.lon}&exclude=minute&units=metric&appid=${api.key}`
@@ -400,10 +401,9 @@ getWeather()
 
 
 
+
 // event listener for the city search button
 searchBtn.addEventListener("search", getWeather);
-searchBtn.addEventListener("search", scrollWeatherInfo) ;
-
 
 
 
