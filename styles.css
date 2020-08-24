@@ -13,25 +13,24 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
 }
 /* the header styling */
 .header{
     grid-area: header;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--deep-blue);
     color: var(--powder-blue);
-    padding: .2em;
 }
 /* the logo */
 .logo p{
     font-family: 'Princess Sofia', cursive;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: bold;
-    margin-left: 4em;
+    margin-left: 2em;
 }
 /* navigation styling */
 .nav ul{
@@ -72,7 +71,7 @@ nav ul li a{
     color: var(--deep-blue);
 }
 .current-city h2{
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.2em;
 }
 .current-city .time{
@@ -139,10 +138,6 @@ br{
     display: flex;
     justify-content: center;
 }
-.info2{
-    margin-left: 2em;
-    text-align: center;
-}
 /* the information boxes */
 .info1, .info2{
     background-color: var(--yellowish);
@@ -153,6 +148,11 @@ br{
     max-height: 250px;
     background-image: linear-gradient(white,var(--yellowish), var(--yellowish));
     box-shadow: 3px 1px 2px 1px var(--dark-blue);
+}
+.info2{
+    margin-left: 2em;
+    text-align: center;
+    padding: 0em 3.5em 0em 3.5em;
 }
 .info1 li{
     list-style-type: disc;

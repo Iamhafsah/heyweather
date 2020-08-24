@@ -393,11 +393,11 @@ const getWeather = async () => {
         time.innerHTML = dayjs(timeIn.datetime).format('H:mm a');
     
     }
-    getTime()
+    getTime();
     }
     latitude();
 }
-getWeather()
+getWeather();
 
 
 
