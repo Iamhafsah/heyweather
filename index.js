@@ -95,9 +95,11 @@ const getWeather = async () => {
             if(myJson.cod == 404){
                 alert('I cant find the name of your city. Please check your spelling and try again.')
             }if(myJson.cod == 200){
-            element.scrollIntoView({behaviour:'smooth'});
+             setTimeout(() => {
+                element.scrollIntoView({behaviour:'smooth'});
+             }, 2000);
             };
-            
+
         latitude = async() =>{
             const respo = await fetch(
              `https://api.openweathermap.org/data/2.5/onecall?lat=${myJson.coord.lat}&lon=${myJson.coord.lon}&exclude=minute&units=metric&appid=${api.key}`
