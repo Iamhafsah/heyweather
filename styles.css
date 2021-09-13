@@ -6,7 +6,7 @@
     --lilac: #E4CEE0;
     --light-purple: #A15D98;
     --deep-blue:#003768;
-    --yellowish: #f8f888;
+    /* --yellowish: #f8f888; */
 }
 /* styling for the body of the page */
 body{
@@ -147,7 +147,7 @@ br{
     max-width: 600px;
     max-height: 250px;
     background-image: linear-gradient(white,var(--yellowish), var(--yellowish));
-    box-shadow: 3px 1px 2px 1px var(--dark-blue);
+    box-shadow:  0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .info2{
     margin-left: 2em;

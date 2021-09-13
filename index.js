@@ -77,7 +77,7 @@ let time7 = document.querySelector('.time7');
 let tips = document.querySelector('.tips');
 
 //getting the bottom container when result is displayed
-const element = document.querySelector('.bottom-container');
+const bottomContainer = document.querySelector('.bottom-container');
 
 // my API key
 const api = {
@@ -91,12 +91,13 @@ const getWeather = async () => {
                 `https://api.openweathermap.org/data/2.5/weather?q=${searchBtn.value}&units=metric&appid=${api.key}`
             );
             const myJson = await response.json();
-            console.log(myJson);
+            // console.log(myJson);
             if(myJson.cod == 404){
                 alert('I cant find the name of your city. Please check your spelling and try again.')
-            }if(myJson.cod == 200){
+            }
+            if(myJson.cod == 200){
              setTimeout(() => {
-                element.scrollIntoView({behaviour:'smooth'});
+                bottomContainer.scrollIntoView({behaviour:'smooth'});
              }, 2000);
             };
 
