@@ -136,7 +136,7 @@ const getWeather = async () => {
 
         if (myJson.weather[0].description.includes('rain')) {
             currentIcon.className = "fas fa-cloud-rain";
-            tips.innerHTML = 'Perfect weather for a hot cup of tea or coffee. If i were you i would go out with an umbrella . ☔' ;
+            tips.innerHTML = 'Perfect weather for a hot cup of tea or coffee. If I were you I would go out with an umbrella . ☔' ;
         } else if (myJson.weather[0].description.includes('clear')) {
             currentIcon.className = "far fa-sun";
             tips.innerHTML = 'Perfect day for a stroll. You can go shopping, gardening, visit friends, or have a picnic. Go for it!! 😎' ;
