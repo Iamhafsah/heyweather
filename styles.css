@@ -49,6 +49,7 @@ nav ul li a{
 .bottom-container{
     display: grid;
     grid-template-areas: "first second";
+    background-image: repeating-linear-gradient(45deg, rgb(255,255,255) 0px, rgb(255,255,255) 20px,transparent 20px, transparent 21px),repeating-linear-gradient(135deg, rgb(255,255,255) 0px, rgb(255,255,255) 20px,transparent 20px, transparent 21px),linear-gradient(90deg, hsl(168,96%,25%),hsl(168,96%,25%));
 }
 /* the div to the left containing current details of a searched city */
 .current-city{
@@ -99,6 +100,13 @@ br{
 /* the four previous days */
 .days{
     color: var(--deep-blue);
+    font-size: 1em;
+}
+.day1{
+    margin-right: .5em;
+}
+#day1-icon{
+    margin-left: .8em;
 }
 /* the section by the right with detailed information of the day's weather */
 .current-day-details{
@@ -147,6 +155,7 @@ br{
     max-width: 600px;
     max-height: 250px;
     box-shadow:  0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: white;
 }
 .info2{
     margin-left: 2em;
@@ -252,7 +261,7 @@ footer .logo{
     }
 }
 @media screen and (max-width:500px){
-    .hour-7{
+    .hour-6, .hour-7{
         display: none;
     }
     .info1, .info2{
@@ -280,12 +289,15 @@ footer .logo{
     .high, .low{
         display: none;
     }
+    .day1{
+        margin-right: 1.5em;
+    }
+    #day1-icon{
+        margin-left: .5em;
+    }
 
 }
 @media screen and (max-width:390px){
-    .hour-6, .hour-7{
-        display: none;
-    }
     .info1, .info2{
         margin-left: 0em;
         text-align: center;
