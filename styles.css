@@ -242,6 +242,8 @@ footer .logo{
         flex-direction: column;
         justify-content: center;
         margin-left: 2em;
+        padding-top: 0;
+        padding-bottom: 2em;
     }
     .four-days i{
         margin-left: .5em;
@@ -257,7 +259,7 @@ footer .logo{
         flex-direction: column;
     }
     footer .logo{
-        margin-left: -3em;
+        display: none;
     }
 }
 @media screen and (max-width:500px){
@@ -294,6 +296,9 @@ footer .logo{
     }
     #day1-icon{
         margin-left: .5em;
+    }
+    .current-city{
+        padding-bottom: 0;
     }
 
 }
