@@ -126,6 +126,11 @@
         display: none;
     }
 }
+@media screen and (max-width:700px){
+    #search-btn{
+        width: 70%;
+}
+}
 @media screen and (max-width:390px){
     #search-btn{
         margin: 1em auto 2em auto;

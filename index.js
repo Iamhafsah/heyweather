@@ -1,6 +1,9 @@
 // search button
 let searchBtn = document.getElementById('search-btn');
 
+// current year for footer
+let currentYear = document.querySelector('.current-year')
+
 // current day details
 let currentDayBreakdown = document.querySelector('.current-day-details')
 
@@ -408,5 +411,7 @@ getWeather();
 // event listener for the city search button
 searchBtn.addEventListener("search", getWeather);
 
+let thisYear = new Date();
+currentYear.innerHTML = thisYear.getFullYear()
 
 

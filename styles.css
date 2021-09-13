@@ -141,13 +141,11 @@ br{
 }
 /* the information boxes */
 .info1, .info2{
-    background-color: var(--yellowish);
     padding: 0em 5em 0em 2em;
     border-radius: 1.2em;
     min-width: 200px;
     max-width: 600px;
     max-height: 250px;
-    background-image: linear-gradient(white,var(--yellowish), var(--yellowish));
     box-shadow:  0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .info2{
@@ -191,6 +189,7 @@ footer a{
 /* the logo in the footer */
 footer .logo{
     margin-top: 1em;
+    margin-left: -10em;
 }
 /* copyright statement */
 .copyright{
@@ -228,6 +227,7 @@ footer .logo{
     }
     .info1 li{
         list-style-type: none;
+        padding-bottom: 0px;
     }
     .more-weather-info{
         flex-direction: column;
@@ -239,6 +239,7 @@ footer .logo{
     }
     .info1, .info2{
         text-align: center;
+        min-width: 150px;
     }
     .info2{
         margin: 2em auto;
