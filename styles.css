@@ -137,13 +137,14 @@ br{
 .more-weather-info{
     display: flex;
     justify-content: center;
+    padding-top: 3em;
 }
 /* the information boxes */
 .info1, .info2{
     background-color: var(--yellowish);
     padding: 0em 5em 0em 2em;
     border-radius: 1.2em;
-    min-width: 150px;
+    min-width: 200px;
     max-width: 600px;
     max-height: 250px;
     background-image: linear-gradient(white,var(--yellowish), var(--yellowish));
@@ -156,6 +157,7 @@ br{
 }
 .info1 li{
     list-style-type: disc;
+    padding-bottom: .4em;
 }
 .info1 h3{
     margin-left: 1em;
